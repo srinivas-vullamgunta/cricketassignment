@@ -1,0 +1,18 @@
+<div *ngIf="undefined === teams">Loading...</div>
+<div *ngIf="undefined !== teams" style="float:left;width:20%;"> 
+  <table>
+    <tr><td colspan="2"><h1>Cricket Teams</h1></td></tr>
+    <tr>
+        <th>Team Logo</th>
+        <th>Team Name</th>      
+    </tr>
+    <tr *ngFor="let team of teams">
+      <td (click)="getTeamPlayers($event, team)"><img src="http://127.0.0.1:8000{{team.logoUri}}" height=50px;/></td>
+      <td (click)="getTeamPlayers($event, team)" >{{team.name}}</td>
+      
+    </tr>
+  </table>   
+</div>
+<div style="float:left;">
+  <app-teamplayers-list [teamPlayers]="teamPlayers"></app-teamplayers-list>
+</div>

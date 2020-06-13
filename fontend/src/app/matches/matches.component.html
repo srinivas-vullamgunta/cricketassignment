@@ -1,0 +1,18 @@
+<div *ngIf="undefined === matches">Loading...</div>
+<div *ngIf="undefined !== matches"> 
+  <table>
+    <tr><td colspan="3"><h1>Cricket Matches</h1></td></tr>
+    <tr>
+      <th>Team1</th>
+      <th>Team2</th>
+      <th>Winner Team</th>
+    </tr>
+    <tr *ngFor="let match of matches">
+      <td>{{match.team1}}</td>
+      <td>{{match.team2}}</td>
+      <td>{{match.WinnerTeam}}</td>
+      
+    </tr>
+  </table>
+   
+</div>

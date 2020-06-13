@@ -1,0 +1,18 @@
+<div *ngIf="undefined === points">Loading...</div>
+<div *ngIf="undefined !== points"> 
+  <table>
+    <tr><td colspan="4"><h1>Cricket Points table</h1></td></tr>
+    <tr>
+      <th>Team Name</th>
+      <th>Play</th>
+      <th>Win</th>
+      <th>Loss</th>
+    </tr>
+    <tr *ngFor="let point of points">
+      <td>{{point.name}}</td>
+      <td>{{point.play}}</td>
+      <td>{{point.win}}</td>
+      <td>{{point.loss}}</td>      
+    </tr>
+  </table>   
+</div>

@@ -1,0 +1,19 @@
+<div style="float:left; width:10%;">
+  
+  <!-- This nav gives you links to click, which tells the router which route to use (defined in the routes constant in  AppRoutingModule) -->
+  <table>
+    <tr><td colspan="2"><h1>Menus</h1></td></tr>
+    <tr>
+      <td><a routerLink="/teams" routerLinkActive="active">Teams</a></td>
+    </tr>
+    <tr>
+      <td><a routerLink="/matches" routerLinkActive="active">Matches</a></td>
+    </tr>
+    <tr>
+      <td><a routerLink="/points" routerLinkActive="active">Points</a></td>
+    </tr>
+  </table> 
+</div>
+<div >
+  <router-outlet></router-outlet>
+</div>
